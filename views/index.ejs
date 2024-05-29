@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Posts</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Posts</h1>
+      <a href="/new" class="btn btn-primary mb-3">Add New</a>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Message</th>
+            <th>Creator</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Post 1</td>
+            <td>This is the message for Post 1.</td>
+            <td>John Doe</td>
+            <td>
+              <a href="/posts/1/edit" class="btn btn-warning">Update</a>
+              <form
+                action="/posts/1?_method=DELETE"
+                method="POST"
+                style="display: inline"
+              >
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>Post 2</td>
+            <td>This is the message for Post 2.</td>
+            <td>Jane Smith</td>
+            <td>
+              <a href="/posts/2/edit" class="btn btn-warning">Update</a>
+              <form
+                action="/posts/2?_method=DELETE"
+                method="POST"
+                style="display: inline"
+              >
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>Post 3</td>
+            <td>This is the message for Post 3.</td>
+            <td>Bob Johnson</td>
+            <td>
+              <a href="/posts/3/edit" class="btn btn-warning">Update</a>
+              <form
+                action="/posts/3?_method=DELETE"
+                method="POST"
+                style="display: inline"
+              >
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
