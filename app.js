@@ -13,8 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join("./views"));
 
-const CONNECTION_URL = "mongodb://localhost:27017/posts";
-const PORT = 5000;
+const PORT = 4001;
 
 app.get("/", async (req, res) => {
   res.render("index");
@@ -26,9 +25,7 @@ app.get("/new", async (req, res) => {
 
 mongoose
   .connect("mongodb://0.0.0.0:27017/")
-  .then(() =>
-    app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
-  )
+  .then(() => console.log(`connected`))
   .catch((error) => console.error(error.message));
 
 app.use("/posts", postRoutes);
